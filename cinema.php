@@ -21,21 +21,15 @@ $planoPrime = true;
 
 $IncluidoNoPlano = $planoPrime || $anolancamento<2020;
 
-echo "A nota do filme é ".$notaFilme."\n";
-echo"O nome do filme é: ".$nomeFilme."\n";
-echo "Ano de lançamento do filme: ".$anolancamento."\n";
+echo "A nota do filme é " . $notaFilme . "\n";
+echo "O nome do filme é: " . $nomeFilme . "\n";
+echo "Ano de lançamento do filme: " . $anolancamento . "\n";
 
-if ($anolancamento >= 2022){
-    echo"Essse filme é um lançamento\n";
-}elseif($anolancamento>2020 && $anolancamento<=2022){
-    echo"Essse filme ainda é novo\n";
-}else{
-    echo"Essse filme não é um lançamento\n";
-}
+exibermensagemlancamento($anolancamento);
 
-$genero = match($nomeFilme){
-     "Top Gun - Maverick"=>"ação",
-      default=>"Gênero desconhecido",
+$genero = match ($nomeFilme) {
+    "Top Gun - Maverick" => "ação",
+    default => "Gênero desconhecido",
 };
 
 echo"O gênero do filme é :$genero\n";
